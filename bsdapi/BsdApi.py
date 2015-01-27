@@ -207,7 +207,7 @@ class BsdApi:
     def cons_deleteDatasetMap(self, map_id):
         query = {'map_id': str(map_id)}
         url_secure = self._generateRequest('/cons_group/delete_dataset_map', query)
-        return self._makeGETRequest(url_secure)
+        return self._makePOSTRequest(url_secure, query)
 
     """
         ***** Cons_Group *****
