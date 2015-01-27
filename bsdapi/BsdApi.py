@@ -201,12 +201,12 @@ class BsdApi:
 
     def cons_deleteDataset(self, dataset_id):
         query = {'dataset_id': str(dataset_id)}
-        url_secure = self._generateRequest('/cons_group/delete_dataset', query)
+        url_secure = self._generateRequest('/cons/delete_dataset', query)
         return self._makeGETRequest(url_secure)
 
     def cons_deleteDatasetMap(self, map_id):
         query = {'map_id': str(map_id)}
-        url_secure = self._generateRequest('/cons_group/delete_dataset_map', query)
+        url_secure = self._generateRequest('/cons/delete_dataset_map', query)
         return self._makePOSTRequest(url_secure, query)
 
     """
